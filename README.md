@@ -87,6 +87,8 @@ Wikipedia dump, available [http://dumps.wikimedia.org/enwiki/20140707/enwiki-201
 Once the download is finished, untar the package, and from the directory ''dexter2'', just run
 
   	java -Xmx3000m -jar dexter-2.1.0.jar
+        mvn package
+        mvn jetty:run
 
 (you will need at least 3G of ram and Java 7).
 
