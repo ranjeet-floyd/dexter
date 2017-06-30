@@ -11,8 +11,8 @@
 	<artifactId>dexter-webapp</artifactId>
 	<version>2.1.0</version>
 	<name>Dexter Webapp</name>
-	<packaging>jar</packaging>
-	<!--packaging>jar</packaging -->
+	<!--<packaging>war</packaging>-->
+	<packaging>jar</packaging> 
 	<dependencies>
 		<dependency>
 			<groupId>it.cnr.isti.hpc</groupId>

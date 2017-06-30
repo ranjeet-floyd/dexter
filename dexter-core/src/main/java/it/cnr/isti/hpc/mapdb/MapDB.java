@@ -18,7 +18,6 @@ package it.cnr.isti.hpc.mapdb;
 import java.io.File;
 import java.util.Map;
 import java.util.Set;
-
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 import org.slf4j.Logger;

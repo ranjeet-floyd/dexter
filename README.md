@@ -128,6 +128,7 @@ replace the path in `FIXME` with the absolute or relative path to the folder tha
 the model from the website, the folder is called `en-model-20140707`. Once you setup the folder just start the server running the command:
 
       	java -Xmx3000m -jar dexter-2.1.0.jar
+        mvn package ; mvn jetty:run 
 
     
 ### Use the client

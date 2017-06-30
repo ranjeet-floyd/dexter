@@ -40,13 +40,11 @@ import it.cnr.isti.hpc.dexter.relatedness.Relatedness;
 import it.cnr.isti.hpc.dexter.spotter.Spotter;
 import it.cnr.isti.hpc.dexter.spotter.filter.SpotMatchFilter;
 import it.cnr.isti.hpc.dexter.util.DexterParamsXMLParser.Param;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -245,7 +243,8 @@ public class DexterParams {
 		if (dexterParams == null) {
 			String confFile = System.getProperty("conf");
 			if (confFile == null)
-				confFile = "dexter-conf.xml";
+                            //TODO | remove hard coded path
+				confFile = "/home/ranjeet/NetBeansProjects/github/dexter/dexter-core/dexter-conf.xml";
 			String resourceRoot = System.getProperty("dexter.resourceRoot", System.getProperty("user.dir"));
 			logger.info("loading configuration from {} ", confFile);
 			dexterParams = new DexterParams(resourceRoot, confFile);

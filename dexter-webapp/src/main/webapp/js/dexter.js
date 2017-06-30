@@ -4,7 +4,7 @@ function annotateText(){
 	
 	//alert("annotate: "+text.substring(0,100)+"...")
 	//
-	$.getJSON("./rest/annotate?text="+text,
+	$.getJSON("./api/rest/annotate?text="+text,
 	function(data) {
 			//alert(val)
 			annotate = data.annotatedText

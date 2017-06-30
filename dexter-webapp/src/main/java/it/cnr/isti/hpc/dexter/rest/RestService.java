@@ -15,6 +15,11 @@
  */
 package it.cnr.isti.hpc.dexter.rest;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.sun.jersey.api.representation.Form;
+import com.wordnik.swagger.annotations.Api;
+import com.wordnik.swagger.annotations.ApiOperation;
 import it.cnr.isti.hpc.dexter.StandardTagger;
 import it.cnr.isti.hpc.dexter.Tagger;
 import it.cnr.isti.hpc.dexter.article.ArticleServer;
@@ -51,7 +56,6 @@ import it.cnr.isti.hpc.dexter.spotter.Spotter;
 import it.cnr.isti.hpc.dexter.util.DexterLocalParams;
 import it.cnr.isti.hpc.dexter.util.DexterParams;
 import it.cnr.isti.hpc.wikipedia.article.Article;
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
@@ -60,7 +64,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
-
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -73,15 +76,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.sun.jersey.api.representation.Form;
-import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
 
 /**
  * @author Diego Ceccarelli <diego.ceccarelli@isti.cnr.it>
@@ -92,6 +88,12 @@ import com.wordnik.swagger.annotations.ApiOperation;
 @Path("rest")
 @Api(value = "rest", description = "Dexter Rest Service")
 public class RestService {
+
+    public RestService() {
+        logger.info("rest service initiated");
+    }
+    
+    
 
 	private static Gson gson = new GsonBuilder()
 			.serializeSpecialFloatingPointValues().create();
